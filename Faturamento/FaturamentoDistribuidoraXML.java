@@ -12,12 +12,6 @@ import java.math.RoundingMode;
 
     public class FaturamentoDistribuidoraXML {
 
-        public static double arredondar(double valor) {
-
-            BigDecimal bd = new BigDecimal(valor).setScale(2, RoundingMode.HALF_UP);
-            return bd.doubleValue();
-        }
-
         public static void main(String[] args) {
 
 
@@ -79,5 +73,10 @@ import java.math.RoundingMode;
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }
+         public static double arredondar(double valor) {
+
+            BigDecimal bd = new BigDecimal(valor).setScale(2, RoundingMode.HALF_UP);
+            return bd.doubleValue();
         }
     }
